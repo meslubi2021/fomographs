@@ -3,8 +3,8 @@ const colorArray = ['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911
 let coinsListArray = [];
 
 const REDDIT_USER_BASE_URL = 'https://www.reddit.com/user/';
-const COINSIGHT_COIN_DETAILS_URL = 'https://www.laverageorgia.altervista.org/aldobrand/coin-details.html'
-const COINSIGHT_MENTIONER_DETAILS_URL = '../aldobrand/mentioner-details.html?user='
+const COINSIGHT_COIN_DETAILS_URL = 'coin-details.html'
+const COINSIGHT_MENTIONER_DETAILS_URL = 'mentioner-details.html?user='
 
 function getCoinNameFromUrl() {
   const queryString = window.location.search;
@@ -586,7 +586,7 @@ function getTopMentionersUps(coinsDataArray) {
 
 function goToCoinPageFunction(coinName) {
   return function () {
-    location.href = '../aldobrand/coin-details.html?coin=' + coinName;
+    location.href = 'coin-details.html?coin=' + coinName;
   }
 }
 

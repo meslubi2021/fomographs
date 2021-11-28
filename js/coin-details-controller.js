@@ -118,9 +118,9 @@ function getCoinDetails() {
         const image = result.image;
 
         document.getElementById("coin-logo").src = image;
-        document.getElementById("coin-name").innerHTML = coinName;
-        document.getElementById("coin-title").innerHTML = coinName;
-        document.getElementById("coin-symbol").innerHTML = result.symbol;
+        document.getElementById("coin-name").innerHTML = titleCase(coinName);
+        document.getElementById("coin-title").innerHTML = titleCase(coinName);
+        document.getElementById("coin-symbol").innerHTML = ' (' + result.symbol + ')';
         document.getElementById("total-mentions-value").innerHTML = totalMentions;
         document.getElementById("total-awards-value").innerHTML = totalAwards;
         document.getElementById("total-ups-value").innerHTML = totalUps;
