@@ -1,0 +1,888 @@
+{
+  "ftp://ftp.laverageorgia.altervista.org@laverageorgia": {
+    ".ftpquota": {
+      "type": "-",
+      "size": 7,
+      "lmtime": 0,
+      "modified": false
+    },
+    ".htaccess": {
+      "type": "-",
+      "size": 36,
+      "lmtime": 0,
+      "modified": false
+    },
+    "1.png": {
+      "type": "-",
+      "size": 97089,
+      "lmtime": 0,
+      "modified": false
+    },
+    "10.png": {
+      "type": "-",
+      "size": 92988,
+      "lmtime": 0,
+      "modified": false
+    },
+    "11.png": {
+      "type": "-",
+      "size": 84241,
+      "lmtime": 0,
+      "modified": false
+    },
+    "12.png": {
+      "type": "-",
+      "size": 60945,
+      "lmtime": 0,
+      "modified": false
+    },
+    "14.png": {
+      "type": "-",
+      "size": 109941,
+      "lmtime": 0,
+      "modified": false
+    },
+    "15.png": {
+      "type": "-",
+      "size": 73462,
+      "lmtime": 0,
+      "modified": false
+    },
+    "16.png": {
+      "type": "-",
+      "size": 76052,
+      "lmtime": 0,
+      "modified": false
+    },
+    "2.png": {
+      "type": "-",
+      "size": 89931,
+      "lmtime": 0,
+      "modified": false
+    },
+    "3.png": {
+      "type": "-",
+      "size": 79870,
+      "lmtime": 0,
+      "modified": false
+    },
+    "4.png": {
+      "type": "-",
+      "size": 98341,
+      "lmtime": 0,
+      "modified": false
+    },
+    "5.png": {
+      "type": "-",
+      "size": 94987,
+      "lmtime": 0,
+      "modified": false
+    },
+    "6.png": {
+      "type": "-",
+      "size": 89780,
+      "lmtime": 0,
+      "modified": false
+    },
+    "7.png": {
+      "type": "-",
+      "size": 80803,
+      "lmtime": 0,
+      "modified": false
+    },
+    "8.png": {
+      "type": "-",
+      "size": 60117,
+      "lmtime": 0,
+      "modified": false
+    },
+    "Bugin Auto": {},
+    "CreazioniGrazia": {},
+    "HallOfFame": {},
+    "IPP": {},
+    "aldobrand": {
+      ".browserslistrc": {
+        "type": "-",
+        "size": 208,
+        "lmtime": 0,
+        "modified": false
+      },
+      ".gitignore": {
+        "type": "-",
+        "size": 12,
+        "lmtime": 0,
+        "modified": false
+      },
+      ".travis.yml": {
+        "type": "-",
+        "size": 199,
+        "lmtime": 0,
+        "modified": false
+      },
+      ".vscode": {
+        "ftp-kr.diff.index.html": {
+          "type": "-",
+          "size": 22067,
+          "lmtime": 1635329856028,
+          "modified": false
+        }
+      },
+      "404.html": {
+        "type": "-",
+        "size": 22113,
+        "lmtime": 0,
+        "modified": false
+      },
+      "LICENSE": {
+        "type": "-",
+        "size": 1091,
+        "lmtime": 0,
+        "modified": false
+      },
+      "PRO_UPGRADE.txt": {
+        "type": "-",
+        "size": 793,
+        "lmtime": 0,
+        "modified": false
+      },
+      "README.md": {
+        "type": "-",
+        "size": 4141,
+        "lmtime": 0,
+        "modified": false
+      },
+      "blank.html": {
+        "type": "-",
+        "size": 21756,
+        "lmtime": 0,
+        "modified": false
+      },
+      "buttons.html": {
+        "type": "-",
+        "size": 32956,
+        "lmtime": 0,
+        "modified": false
+      },
+      "cards.html": {
+        "type": "-",
+        "size": 32247,
+        "lmtime": 0,
+        "modified": false
+      },
+      "charts.html": {
+        "type": "-",
+        "size": 28081,
+        "lmtime": 0,
+        "modified": false
+      },
+      "coin-details.html": {
+        "type": "-",
+        "size": 28770,
+        "lmtime": 1635889323742,
+        "modified": false
+      },
+      "css": {},
+      "forgot-password.html": {
+        "type": "-",
+        "size": 3543,
+        "lmtime": 0,
+        "modified": false
+      },
+      "gulpfile.js": {
+        "type": "-",
+        "size": 3784,
+        "lmtime": 0,
+        "modified": false
+      },
+      "img": {},
+      "index.html": {
+        "type": "-",
+        "size": 22749,
+        "lmtime": 1635886117458,
+        "modified": false
+      },
+      "js": {
+        "charts": {
+          "barCharts.js": {
+            "type": "-",
+            "size": 8603,
+            "lmtime": 1635457066331,
+            "modified": false
+          },
+          "lineCharts.js": {
+            "type": "-",
+            "size": 11883,
+            "lmtime": 1635459799981,
+            "modified": false
+          },
+          "pieCharts.js": {
+            "type": "-",
+            "size": 1614,
+            "lmtime": 1635367398084,
+            "modified": false
+          },
+          "radarCharts.js": {
+            "type": "-",
+            "size": 1517,
+            "lmtime": 0,
+            "modified": false
+          }
+        },
+        "coin-details-controller.js": {
+          "type": "-",
+          "size": 8948,
+          "lmtime": 1635540249193,
+          "modified": true
+        },
+        "common.js": {
+          "type": "-",
+          "size": 219,
+          "lmtime": 0,
+          "modified": false
+        },
+        "demo": {},
+        "main.js": {
+          "type": "-",
+          "size": 5655,
+          "lmtime": 1635550770407,
+          "modified": true
+        },
+        "mentioner-details-controller.js": {
+          "type": "-",
+          "size": 10766,
+          "lmtime": 1635887844003,
+          "modified": false
+        },
+        "sb-admin-2.js": {
+          "type": "-",
+          "size": 1780,
+          "lmtime": 0,
+          "modified": false
+        },
+        "sb-admin-2.min.js": {
+          "type": "-",
+          "size": 1265,
+          "lmtime": 0,
+          "modified": false
+        },
+        "utils": {
+          "utils.js": {
+            "type": "-",
+            "size": 27777,
+            "lmtime": 1635889306400,
+            "modified": false
+          }
+        }
+      },
+      "login.html": {
+        "type": "-",
+        "size": 4705,
+        "lmtime": 0,
+        "modified": false
+      },
+      "mentioner-details.html": {
+        "type": "-",
+        "size": 19540,
+        "lmtime": 1635889331621,
+        "modified": false
+      },
+      "package-lock.json": {
+        "type": "-",
+        "size": 642222,
+        "lmtime": 0,
+        "modified": false
+      },
+      "package.json": {
+        "type": "-",
+        "size": 1493,
+        "lmtime": 1635067902775,
+        "modified": false
+      },
+      "register.html": {
+        "type": "-",
+        "size": 4730,
+        "lmtime": 0,
+        "modified": false
+      },
+      "scss": {
+        "_buttons.scss": {
+          "type": "-",
+          "size": 980,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_cards.scss": {
+          "type": "-",
+          "size": 733,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_charts.scss": {
+          "type": "-",
+          "size": 454,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_dropdowns.scss": {
+          "type": "-",
+          "size": 356,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_error.scss": {
+          "type": "-",
+          "size": 1139,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_footer.scss": {
+          "type": "-",
+          "size": 196,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_global.scss": {
+          "type": "-",
+          "size": 886,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_login.scss": {
+          "type": "-",
+          "size": 893,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_mixins.scss": {
+          "type": "-",
+          "size": 1,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_navs.scss": {
+          "type": "-",
+          "size": 85,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_utilities.scss": {
+          "type": "-",
+          "size": 239,
+          "lmtime": 0,
+          "modified": false
+        },
+        "_variables.scss": {
+          "type": "-",
+          "size": 2477,
+          "lmtime": 0,
+          "modified": false
+        },
+        "navs": {},
+        "sb-admin-2.scss": {
+          "type": "-",
+          "size": 504,
+          "lmtime": 0,
+          "modified": false
+        },
+        "utilities": {}
+      },
+      "tables.html": {
+        "type": "-",
+        "size": 51345,
+        "lmtime": 0,
+        "modified": false
+      },
+      "utilities-animation.html": {
+        "type": "-",
+        "size": 28641,
+        "lmtime": 0,
+        "modified": false
+      },
+      "utilities-border.html": {
+        "type": "-",
+        "size": 26234,
+        "lmtime": 0,
+        "modified": false
+      },
+      "utilities-color.html": {
+        "type": "-",
+        "size": 27291,
+        "lmtime": 0,
+        "modified": false
+      },
+      "utilities-other.html": {
+        "type": "-",
+        "size": 26674,
+        "lmtime": 0,
+        "modified": false
+      },
+      "vendor": {
+        "bootstrap": {
+          "js": {},
+          "scss": {
+            "_alert.scss": {
+              "type": "-",
+              "size": 1164,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_badge.scss": {
+              "type": "-",
+              "size": 1121,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_breadcrumb.scss": {
+              "type": "-",
+              "size": 1326,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_button-group.scss": {
+              "type": "-",
+              "size": 3626,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_buttons.scss": {
+              "type": "-",
+              "size": 2685,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_card.scss": {
+              "type": "-",
+              "size": 5935,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_carousel.scss": {
+              "type": "-",
+              "size": 4794,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_close.scss": {
+              "type": "-",
+              "size": 940,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_code.scss": {
+              "type": "-",
+              "size": 1012,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_custom-forms.scss": {
+              "type": "-",
+              "size": 15688,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_dropdown.scss": {
+              "type": "-",
+              "size": 4436,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_forms.scss": {
+              "type": "-",
+              "size": 9242,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_functions.scss": {
+              "type": "-",
+              "size": 4181,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_grid.scss": {
+              "type": "-",
+              "size": 1745,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_images.scss": {
+              "type": "-",
+              "size": 1157,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_input-group.scss": {
+              "type": "-",
+              "size": 6318,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_jumbotron.scss": {
+              "type": "-",
+              "size": 405,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_list-group.scss": {
+              "type": "-",
+              "size": 3870,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_media.scss": {
+              "type": "-",
+              "size": 83,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_mixins.scss": {
+              "type": "-",
+              "size": 1050,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_modal.scss": {
+              "type": "-",
+              "size": 6308,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_nav.scss": {
+              "type": "-",
+              "size": 2154,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_navbar.scss": {
+              "type": "-",
+              "size": 7529,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_pagination.scss": {
+              "type": "-",
+              "size": 1823,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_popover.scss": {
+              "type": "-",
+              "size": 4705,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_print.scss": {
+              "type": "-",
+              "size": 3033,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_progress.scss": {
+              "type": "-",
+              "size": 1171,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_reboot.scss": {
+              "type": "-",
+              "size": 11539,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_root.scss": {
+              "type": "-",
+              "size": 572,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_spinners.scss": {
+              "type": "-",
+              "size": 1263,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_tables.scss": {
+              "type": "-",
+              "size": 3544,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_toasts.scss": {
+              "type": "-",
+              "size": 1132,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_tooltip.scss": {
+              "type": "-",
+              "size": 2512,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_transitions.scss": {
+              "type": "-",
+              "size": 261,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_type.scss": {
+              "type": "-",
+              "size": 2222,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_utilities.scss": {
+              "type": "-",
+              "size": 536,
+              "lmtime": 0,
+              "modified": false
+            },
+            "_variables.scss": {
+              "type": "-",
+              "size": 48498,
+              "lmtime": 0,
+              "modified": false
+            },
+            "bootstrap-grid.scss": {
+              "type": "-",
+              "size": 598,
+              "lmtime": 0,
+              "modified": false
+            },
+            "bootstrap-reboot.scss": {
+              "type": "-",
+              "size": 409,
+              "lmtime": 0,
+              "modified": false
+            },
+            "bootstrap.scss": {
+              "type": "-",
+              "size": 918,
+              "lmtime": 0,
+              "modified": false
+            },
+            "mixins": {},
+            "utilities": {},
+            "vendor": {}
+          }
+        },
+        "chart.js": {},
+        "datatables": {},
+        "fontawesome-free": {
+          "LICENSE.txt": {
+            "type": "-",
+            "size": 1548,
+            "lmtime": 0,
+            "modified": false
+          },
+          "attribution.js": {
+            "type": "-",
+            "size": 187,
+            "lmtime": 0,
+            "modified": false
+          },
+          "css": {},
+          "js": {},
+          "less": {},
+          "metadata": {},
+          "package.json": {
+            "type": "-",
+            "size": 1274,
+            "lmtime": 0,
+            "modified": false
+          },
+          "scss": {},
+          "sprites": {},
+          "svgs": {
+            "brands": {},
+            "regular": {},
+            "solid": {}
+          },
+          "webfonts": {}
+        },
+        "jquery": {},
+        "jquery-easing": {}
+      }
+    },
+    "astrologia": {},
+    "begamers": {},
+    "canoa": {},
+    "caven": {},
+    "chat.php": {
+      "type": "-",
+      "size": 22229,
+      "lmtime": 0,
+      "modified": false
+    },
+    "corso-approfondito.php": {
+      "type": "-",
+      "size": 3252,
+      "lmtime": 0,
+      "modified": false
+    },
+    "corso-sistemi.php": {
+      "type": "-",
+      "size": 2768,
+      "lmtime": 0,
+      "modified": false
+    },
+    "create-game.php": {
+      "type": "-",
+      "size": 5394,
+      "lmtime": 0,
+      "modified": false
+    },
+    "create-player.php": {
+      "type": "-",
+      "size": 3193,
+      "lmtime": 0,
+      "modified": false
+    },
+    "css": {},
+    "das": {},
+    "dumbattle": {},
+    "fantacalcio": {},
+    "favicon.ico": {
+      "type": "-",
+      "size": 894,
+      "lmtime": 0,
+      "modified": false
+    },
+    "flow": {},
+    "forum": {},
+    "game_details.php": {
+      "type": "-",
+      "size": 15907,
+      "lmtime": 0,
+      "modified": false
+    },
+    "genertel": {},
+    "google3e5801a8654f0064.html": {
+      "type": "-",
+      "size": 53,
+      "lmtime": 0,
+      "modified": false
+    },
+    "googlecb962161971c3901.html": {
+      "type": "-",
+      "size": 53,
+      "lmtime": 0,
+      "modified": false
+    },
+    "handlerContent.test": {
+      "type": "-",
+      "size": 11,
+      "lmtime": 0,
+      "modified": false
+    },
+    "il-sito.php": {
+      "type": "-",
+      "size": 3612,
+      "lmtime": 0,
+      "modified": false
+    },
+    "img": {},
+    "index.php": {
+      "type": "-",
+      "size": 16974,
+      "lmtime": 0,
+      "modified": false
+    },
+    "index_test.php": {
+      "type": "-",
+      "size": 21630,
+      "lmtime": 0,
+      "modified": false
+    },
+    "indianovinachi": {},
+    "insert-game.php": {
+      "type": "-",
+      "size": 2415,
+      "lmtime": 0,
+      "modified": false
+    },
+    "insert-player.php": {
+      "type": "-",
+      "size": 681,
+      "lmtime": 0,
+      "modified": false
+    },
+    "internetplayspokemon": {},
+    "js": {},
+    "lezione.php": {
+      "type": "-",
+      "size": 2726,
+      "lmtime": 0,
+      "modified": false
+    },
+    "lezioneSO.php": {
+      "type": "-",
+      "size": 2572,
+      "lmtime": 0,
+      "modified": false
+    },
+    "main.js": {
+      "type": "-",
+      "size": 160,
+      "lmtime": 0,
+      "modified": false
+    },
+    "manager_stats.php": {
+      "type": "-",
+      "size": 18007,
+      "lmtime": 0,
+      "modified": false
+    },
+    "partita.php": {
+      "type": "-",
+      "size": 14124,
+      "lmtime": 0,
+      "modified": false
+    },
+    "pixelsdefects": {},
+    "pizzeria": {},
+    "profile.php": {
+      "type": "-",
+      "size": 7491,
+      "lmtime": 0,
+      "modified": false
+    },
+    "query.php": {
+      "type": "-",
+      "size": 35618,
+      "lmtime": 0,
+      "modified": false
+    },
+    "robots.txt": {
+      "type": "-",
+      "size": 153,
+      "lmtime": 0,
+      "modified": false
+    },
+    "rubrica": {},
+    "salutebenessere": {},
+    "scquadro": {},
+    "senontidivertiefinita": {},
+    "sip.html": {
+      "type": "-",
+      "size": 321,
+      "lmtime": 0,
+      "modified": false
+    },
+    "style.css": {
+      "type": "-",
+      "size": 1577,
+      "lmtime": 0,
+      "modified": false
+    },
+    "tesina": {},
+    "universita": {},
+    "upload_profile.php": {
+      "type": "-",
+      "size": 4480,
+      "lmtime": 0,
+      "modified": false
+    },
+    "www.laverageorgia.altervista.org": {}
+  },
+  "$version": 1
+}

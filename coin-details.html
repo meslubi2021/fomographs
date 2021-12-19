@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/custom.css?4" rel="stylesheet">
+    <link href="css/custom.css?6" rel="stylesheet">
 
 </head>
 
@@ -29,7 +29,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar fix-mobile-blink sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -294,20 +294,12 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Mentions</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Mentions - Market Cap</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="Coin mentions count vs Market Cap, in the past month"></i> 
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
                                     </div>
                                 </div>
                                 <!-- Card Body -->
@@ -331,8 +323,13 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Global Position By Mentions - Market Cap</h6>
-                                    
+                                    <h6 class="m-0 font-weight-bold text-primary">Position By Mentions - Market Cap</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="Position in the Most Mentioned Coins Leaderboard and coin Market Cap"></i> 
+                                        </a>
+                                    </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -352,16 +349,8 @@
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="Coin mentions count vs Market Volume"></i> 
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
                                     </div>
                                 </div>
                                 <!-- Card Body -->
@@ -376,24 +365,16 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6">
+                        <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Same market cap change percentage (<span id="rank-value">...</span>) coin mentions</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-bar">
-                                        <canvas id="mentions-per-day-same-rank-chart"></canvas>
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-warning">Top 5 Comments</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="The most upvoted comments for this coin in the current day."></i> 
+                                        </a>
                                     </div>
-                                    <hr>
-                                    Coin with same market cap change percentage in the last 24h of <span id="coin-name-rank"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-warning">Top 5 Comments (Last day)</h6>
                                 </div>
                                 <div class="card-body" id="mentions-comments-card">
                                     
@@ -491,11 +472,11 @@
     
     <!-- mongoDB -->
     <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.6.0/stitch.js"></script>
-    <script src="js/common.js?3"></script>
+    <script src="js/common.js?5"></script>
     <script src="js/utils/utils.js?41"></script>
     <script src="js/charts/barCharts.js?4"></script>
     <script src="js/charts/lineCharts.js?9"></script>
-    <script src="js/coin-details-controller.js?35"></script>
+    <script src="js/coin-details-controller.js?37"></script>
 
 </body>
 

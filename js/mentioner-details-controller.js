@@ -9,7 +9,7 @@ $("#mentioner-avatar").css("width", "4rem");
 getMentionerDetailsData();
 //getDonutChartMentionsData();
 getGlobalPositions();
-getCommentsData();
+//getCommentsData();
 
 /*
 const client = stitch.Stitch.initializeDefaultAppClient('malmap-vgvib');
@@ -185,6 +185,27 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
         
         //plotRadarChart(getUsernameFromUrl(), userRadarData, avgUsersRadaData, "user-stats-radar");
         plotDonutChart(getTopNMentionedCoin(result.coinsArray, 5), "top-mentioned-and-others");
+
+        var topCommentsArray = result.highlightedComments;
+
+        var comments = [];
+
+        topCommentsArray.forEach(commentsArray =>{
+            if(Array.isArray(commentsArray.topCommentsArray))
+                commentsArray.topCommentsArray.forEach(comment => {
+                    comments.push(comment);
+                });
+            else
+                comments.push(commentsArray.topCommentsArray);
+        });
+
+        var commentsCard = document.getElementById("mentions-comments-card");
+        comments.sort(sortCommentsByUps);
+    
+        comments.slice(0, 5).forEach(comment => {
+            commentsCard.appendChild(createComment(comment, "", ""));
+            commentsCard.appendChild(document.createElement('hr'));
+        });
         
     });
 }

@@ -19,8 +19,16 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/custom.css?4" rel="stylesheet">
+    <link href="css/custom.css?6" rel="stylesheet">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GK12Y5GF7P"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GK12Y5GF7P');
+    </script>
 </head>
 
 <body id="page-top">
@@ -29,7 +37,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar fix-mobile-blink sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -156,8 +164,11 @@
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
+                                <div class="card-body no-padding-top">
+                                    <div class="col-xs-12 text-right">
+                                        <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title data-original-title="<i>Coin of the day</i> is the most mentioned coin in the current day. "></i> 
+                                    </div>
+                                    <div class="row no-gutters align-items-center">                                        
                                         <div class="col-xs-2 pr-3">
                                             <img class="img-fluid" style="width: 3rem;" id="most-mentioned-image" src="" />
                                         </div>
@@ -177,7 +188,10 @@
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body no-padding-top">
+                                    <div class="col-xs-12 text-right">
+                                        <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="<i>Most Awarded</i> is the coin whose comments received the highest awards-to-comments ratio."></i> 
+                                    </div>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-xs-2 pr-3">
                                             <img class="img-fluid" style="width: 3rem;" id="most-awarded-image" src="" />
@@ -198,7 +212,10 @@
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body no-padding-top">
+                                    <div class="col-xs-12 text-right">
+                                        <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="<i>Trending</i> is the coin that more than any other became &OpenCurlyDoubleQuote;suddenly popular&CloseCurlyDoubleQuote; in the current day. This coin either received a steep increase of mentions, or its popularity rised while remaining one of the most mentioned coins in the sub. This is calculated with a function that favours coins that have been mentioned a lot and whose popularity kept increasing."></i> 
+                                    </div>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-xs-2 pr-3">
                                             <img class="img-fluid" style="width: 3rem;" id="coin-of-the-day-image" src="" />
@@ -218,14 +235,17 @@
 
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body no-padding-top">
+                                    <div class="col-xs-12 text-right">
+                                        <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="Similarly to <i>Trending</i>, this coin was the <i>hot ticket</i> this week."></i> 
+                                    </div>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-xs-2 pr-3">
                                             <img class="img-fluid" style="width: 3rem;" id="coin-of-the-week-image" src="" />
                                         </div>
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Trending This Week</div>
+                                                Flavour This Week</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800 capitalized-text" id="coin-of-the-week-value">...</div>
                                         </div>
                                         <div class="col-auto">
@@ -251,16 +271,8 @@
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="5-days mentions chart for each of the 10 most mentioned coins in the current day."></i> 
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
                                     </div>
                                 </div>
                                 <!-- Card Body -->
@@ -279,6 +291,12 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Top Mentioned Coins</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="The coins that received more mentions in the current day."></i> 
+                                        </a>
+                                    </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -298,7 +316,13 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Top 10 coin mentions grow</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Top 10 Mentions gain</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="The coins whose mentions increased more, in the current day, compared to the previous day."></i> 
+                                        </a>
+                                    </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -313,7 +337,13 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Top 10 coin mentions decrease</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Top 10 Mentions loss</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="The coins whose mentions increased more, in the current day, compared to the previous day."></i> 
+                                        </a>
+                                    </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -334,8 +364,14 @@
                         <div class="col-xl-6 col-lg-6">
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">MOON Stats</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="Statystics about our beloved r/CryptoCurrency Moons"></i> 
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-center">
@@ -352,8 +388,14 @@
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-warning">Top 10 Moontioners (Last day)</h6>
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-warning">Top 10 Moontioners</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="Users who mentioned MOONS the most in the current day"></i> 
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="card-body" id="top-moontioners-last-day-card">
                                     
@@ -362,8 +404,14 @@
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-warning">Top 10 Moontioners (All time)</h6>
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-warning">Top 10 Upvoted Moontioners</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-question-circle fa-1x text-gray-300 description-tooltip" data-html="true" data-toggle="tooltip" data-placement="top" title="Users who mentioned MOONS the most"></i> 
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="card-body" id="top-moontioners-card">
                                     
@@ -414,7 +462,7 @@
     
     <!-- mongoDB -->
     <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.6.0/stitch.js"></script>
-    <script src="js/common.js?8"></script>
+    <script src="js/common.js?11"></script>
     <script src="js/utils/utils.js?35"></script>
     <script src="js/charts/barCharts.js?16"></script>
     <script src="js/charts/pieCharts.js?7g"></script>

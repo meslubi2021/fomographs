@@ -154,20 +154,20 @@ function getCoinDetails() {
         //marketCapRank = Math.ceil(coinsDataArray[0].market_cap_change_percentage_24h);
         let coinSymbol = result.symbol;
         
-        //let commentsArray = result.commentsArray;
+        let commentsArray = result.topCommentsArray;
     
         //document.getElementById("rank-value").innerHTML = marketCapRank;
-        document.getElementById("coin-name-rank").innerHTML = coinName;
+        //document.getElementById("coin-name-rank").innerHTML = coinName;
 
         plotLineChartMentionsMarketCapByDay(result.labels, result.mentionsData, result.marketCapData, result.awardsData, result.upsData, "mentions-per-day-chart");
         plotLineChartMentionsVolumeByDay(result.labels, result.mentionsData, result.volume, "mentions-per-day-volume-chart");
 
         var commentsCard = document.getElementById("mentions-comments-card");
 
-        /*commentsArray.forEach(comment => {
+        commentsArray.forEach(comment => {
             commentsCard.appendChild(createComment(comment, coinName, coinSymbol));
             commentsCard.appendChild(document.createElement('hr'));
-        });*/
+        });
 
         var topMentionersCard = document.getElementById("top-mentioner-card");
         topMentioners.forEach(mentioner => {

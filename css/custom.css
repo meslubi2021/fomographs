@@ -23,3 +23,19 @@
 .card-body{
     cursor:pointer;
 }
+
+.no-padding-top{
+    padding-top:0px;
+}
+
+.description-tooltip:hover{
+    color: #5a5c69!important;
+}
+
+@media only screen and (orientation: portrait) {
+    .fix-mobile-blink {
+        width: 0!important;
+        overflow: hidden;
+    }
+  }
+  

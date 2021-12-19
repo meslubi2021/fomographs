@@ -2,6 +2,10 @@
 $(window).on('resize', hideSidebar);
 $(window).on('load', hideSidebar);
 
+//enable-tooltips
+$(window).on('load', function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
 
 function hideSidebar(){
   if ($(window).height() > $(window).width()) {
@@ -15,4 +19,6 @@ function hideSidebar(){
       $('.sidebar .collapse').collapse('hide');
     };
   }
+
+  $(".sidebar").removeClass("fix-mobile-blink");
 }
