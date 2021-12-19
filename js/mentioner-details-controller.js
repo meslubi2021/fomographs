@@ -1,5 +1,7 @@
 
 const username = getUsernameFromUrl();
+const userSet = new Set();
+const coinSet = new Set();
 
 $("#mentioner-title").html("u/"+username);    
 
@@ -10,6 +12,7 @@ getMentionerDetailsData();
 //getDonutChartMentionsData();
 getGlobalPositions();
 //getCommentsData();
+getDataList();
 
 /*
 const client = stitch.Stitch.initializeDefaultAppClient('malmap-vgvib');
@@ -181,29 +184,39 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
         $("#top-upvoting-coin-image").attr("src", topUpvotingCoin.image);
     
         let userRadarData = [userMentionsStats.totalComments, userMentionsStats.totalAwards, userMentionsStats.totalUps, userMentionsStats.uniqueCoinMentioned];
-        //let avgUsersRadaData = [avgUsersStats.avgTotalComments, avgUsersStats.avgTotalAwards, avgUsersStats.avgTotalUps, avgUsersStats.avgUniqueCoinMentioned];
+        let avgUsersRadaData = [avgUsersStats.avgTotalComments, avgUsersStats.avgTotalAwards, avgUsersStats.avgTotalUps, avgUsersStats.avgUniqueCoinMentioned];
         
-        //plotRadarChart(getUsernameFromUrl(), userRadarData, avgUsersRadaData, "user-stats-radar");
+        plotRadarChart(getUsernameFromUrl(), userRadarData, avgUsersRadaData, "user-stats-radar");
         plotDonutChart(getTopNMentionedCoin(result.coinsArray, 5), "top-mentioned-and-others");
 
         var topCommentsArray = result.highlightedComments;
 
         var comments = [];
 
+
         topCommentsArray.forEach(commentsArray =>{
             if(Array.isArray(commentsArray.topCommentsArray))
                 commentsArray.topCommentsArray.forEach(comment => {
+                    comment.name = commentsArray.name;
+                    comment.symbol = commentsArray.symbol;
                     comments.push(comment);
                 });
-            else
-                comments.push(commentsArray.topCommentsArray);
+            else{
+                let comment = commentsArray.topCommentsArray;
+                comment.name = commentsArray.name;
+                comment.symbol = commentsArray.symbol;
+                comments.push(comment);
+            }
         });
 
         var commentsCard = document.getElementById("mentions-comments-card");
         comments.sort(sortCommentsByUps);
-    
+        
+        if(comments.length > 0)
+            $('#nothing-to-see').remove();
+
         comments.slice(0, 5).forEach(comment => {
-            commentsCard.appendChild(createComment(comment, "", ""));
+            commentsCard.appendChild(createComment(comment, comment.name, comment.symbol));
             commentsCard.appendChild(document.createElement('hr'));
         });
         
