@@ -8,83 +8,6 @@ getPositionsChartData();
 
 let coinName = "";
 
-/*client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
-    db.collection('COIN').find({}).toArray()
-  ).then(docs => {
-    
-    let coinsDataArray = [];
-    let coinsSameMarketRankArray = [];
-    let datalist = document.getElementById("aviable-coin-list");
-
-    for (var ind = 0; ind < docs.length; ind++) {
-        let doc = docs[docs.length-1-ind];
-        for (var k in doc) {
-            if (doc[k] && doc[k].name && doc[k].name.toLowerCase() == coinName)
-                coinsDataArray.push(doc[k]);
-
-            if(doc[k].name) {
-                if(!coinSet.has({name: doc[k].name, symbol: doc[k].symbol}))
-                    coinSet.add({name: doc[k].name, symbol: doc[k].symbol});
-                if(doc[k].comments)
-                    doc[k].comments.forEach(comment => {
-                        if(!userSet.has(comment.author_name))
-                            userSet.add(comment.author_name);
-                });
-            }
-        }
-    }
-
-    coinSet.forEach(coin => {
-        var opt = document.createElement('option');
-        opt.value = titleCase(coin.name);
-        opt.innerHTML = coin.symbol;
-        $(opt).attr("type", "coin");
-        datalist.appendChild(opt);   
-    });
-
-    userSet.forEach(user => {
-        var opt = document.createElement('option');
-        opt.value = user;
-        opt.innerHTML = "User";
-        $(opt).attr("type", "user");
-        datalist.appendChild(opt);
-    });
-
-    $("#search-coin-value").on("change", function (e) {
-        if(userSet.has(e.target.value))
-            location.href = "mentioner-details.html?user="+e.target.value;
-        else
-            location.href = "coin-details.html?coin="+e.target.value.toLowerCase();
-    });
-
-    $("#search-coin-value-mobile").on("change", function (e) {
-        if(userSet.has(e.target.value))
-            location.href = "mentioner-details.html?user="+e.target.value;
-        else
-            location.href = "coin-details.html?coin="+e.target.value.toLowerCase();
-    });
-
-   //plotLineChartMentionsByDay(labels, mentionsData, "mentions-per-day-chart");
-
-    let lastDoc = docs[docs.length-1];
-    for (var k in lastDoc) {
-        if (k != '_id' && Math.ceil(lastDoc[k].market_cap_change_percentage_24h) == marketCapRank && lastDoc[k].name != coinName)
-            coinsSameMarketRankArray.push(lastDoc[k]);
-    }
-
-    coinsSameMarketRankArray.sort(sortCoinsByMentions);
-    coinsSameMarketRankArray.forEach(coin => {
-        sameMarketLabels.push(coin.symbol);
-        sameMarketData.push(coin.count);
-        sameMarketTitles.push(coin.name);
-    });
-
-    plotSameMarketRankChart(sameMarketData, sameMarketLabels, sameMarketTitles, "mentions-per-day-same-rank-chart");
-    
-  }).catch(err =>{
-    console.error(err);
-  });*/
-
 function getPositionsChartData() {
     $.ajax({
         url: "https://aldobrand.herokuapp.com/get-positions-chart-data?id="+getCoinNameFromUrl(),
@@ -137,16 +60,16 @@ function getCoinDetails() {
         let topMentiorerGainedAwardsDocument = document.getElementById("top-mentioner-per-awards");
 
         topMentionerLastDayDocument.innerHTML = topMentionerLastDay.author_name + " (" + topMentionerLastDay.count + ")";
-        topMentionerLastDayDocument.onclick = function() {location.href = REDDIT_USER_BASE_URL + topMentionerLastDay.author_name};
+        topMentionerLastDayDocument.onclick = function() {location.href = COINSIGHT_MENTIONER_DETAILS_URL + topMentionerLastDay.author_name};
         setRedditAvatar(topMentionerLastDay.author_name, "top-mentioner-last-day-avatar");
         topMentionerAllTimeDocument.innerHTML = topMentionerAllTime.author_name + " (" + topMentionerAllTime.count + ")";
-        topMentionerAllTimeDocument.onclick = function() {location.href = REDDIT_USER_BASE_URL + topMentionerAllTime.author_name}
+        topMentionerAllTimeDocument.onclick = function() {location.href = COINSIGHT_MENTIONER_DETAILS_URL + topMentionerAllTime.author_name}
         setRedditAvatar(topMentionerGainedUpvoted.author_name, "top-mentioner-per-ups-avatar");
         topMentionerLastMonthDocument.innerHTML = topMentionerGainedUpvoted.author_name + " (" + topMentionerGainedUpvoted.count + ")";
-        topMentionerLastMonthDocument.onclick = function() {location.href = REDDIT_USER_BASE_URL + topMentionerGainedUpvoted.author_name}
+        topMentionerLastMonthDocument.onclick = function() {location.href = COINSIGHT_MENTIONER_DETAILS_URL + topMentionerGainedUpvoted.author_name}
         setRedditAvatar(topMentionerAllTime.author_name, "top-mentioner-all-time-avatar");
         topMentiorerGainedAwardsDocument.innerHTML = topMentiorerGainedAwards.author_name + " (" + topMentiorerGainedAwards.count + ")";
-        topMentiorerGainedAwardsDocument.onclick = function() {location.href = REDDIT_USER_BASE_URL + topMentiorerGainedAwards.author_name}
+        topMentiorerGainedAwardsDocument.onclick = function() {location.href = COINSIGHT_MENTIONER_DETAILS_URL + topMentiorerGainedAwards.author_name}
         setRedditAvatar(topMentiorerGainedAwards.author_name, "top-mentioner-per-awards-avatar");
 
         

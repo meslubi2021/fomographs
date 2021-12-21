@@ -32,10 +32,15 @@
     color: #5a5c69!important;
 }
 
+.donation-table td {
+    vertical-align: middle;
+    border:0;
+}
+
 @media only screen and (orientation: portrait) {
     .fix-mobile-blink {
         width: 0!important;
         overflow: hidden;
     }
   }
-  
+
