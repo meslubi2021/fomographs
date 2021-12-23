@@ -905,12 +905,14 @@ function getTopDecreasedCoinByMention(afterMap, beforeMap) {
 
 }
 
-function getDataList() {
+function getDataList(q) {
   $.ajax({
-    url: "https://aldobrand.herokuapp.com/get-datalist/",
+    url: "https://aldobrand.herokuapp.com/get-datalist?q="+q,
     context: document.body
   }).done(function(result) {
     let datalist = document.getElementById("aviable-coin-list");
+    datalist.innerHTML = '';
+
     result.coinsList.forEach(coin => {
       var opt = document.createElement('option');
       opt.value = titleCase(coin.name);

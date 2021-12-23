@@ -1,10 +1,14 @@
 
-getDataList();
+getDataList("");
 //getBestCoinsData();
 //getMoontionerOverview();
 getOverviewData();
 getBarChartData();
 getMoontionerOverview();
+
+$("#search-coin-value").on("input", function (e) {
+  getDataList($("#search-coin-value").val());
+});
 
 
 const userSet = new Set();
