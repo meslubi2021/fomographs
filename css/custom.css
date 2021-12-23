@@ -37,6 +37,14 @@
     border:0;
 }
 
+.table-column-img{
+    display: none;
+}
+
+.table-column-symbol{
+    width: 30%;
+}
+
 @media only screen and (orientation: portrait) {
     .fix-mobile-blink {
         width: 0!important;
@@ -44,3 +52,13 @@
     }
   }
 
+@media (min-width: 576px) {  
+    .table-column-img{
+        display: block;
+        width: 15%;
+    }
+
+    .table-column-symbol{
+        width: 15%;
+    }
+}
