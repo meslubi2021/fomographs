@@ -5,6 +5,7 @@ const coinSet = new Set();
 getCoinDetails();
 getDataList();
 getPositionsChartData();
+getTopMentionersByCoin();
 
 let coinName = "";
 
@@ -17,16 +18,11 @@ function getPositionsChartData() {
     });
 }
 
-function getCoinDetails() {
+function getTopMentionersByCoin() {
     $.ajax({
-        url: "https://aldobrand.herokuapp.com/get-coin-details-data?coin="+getCoinNameFromUrl(),
+        url: "https://aldobrand.herokuapp.com/get-top-mentioners-data-by-coin?coin="+getCoinNameFromUrl(),
         context: document.body
     }).done(function(result) {
-
-        const totalMentions = result.totalMentions;
-        const totalAwards = result.totalAwards;
-        const totalUps = result.totalUps;
-        const awardsPerMentions = totalAwards/totalMentions;
         const topMentionerAllTime = result.topMentionerAllTime;
         const topMentionerLastDay = result.topMentionerLastDay;
         const topMentionerGainedUpvoted = result.topMentionerGainedUpvoted;
@@ -35,24 +31,6 @@ function getCoinDetails() {
         const topMentionersUpvoted = result.topMentionersUpvoted;
         const topMentioners = result.topMentioners;
         const topMentionersLastDay = result.topMentionersLastDay;
-
-        const coinId = result.id;
-        coinName = result.name;
-        const image = result.image;
-
-        document.getElementById("coin-logo").src = image;
-        document.getElementById("coin-name").innerHTML = titleCase(coinName);
-        document.getElementById("coin-title").innerHTML = titleCase(coinName);
-        document.getElementById("coin-symbol").innerHTML = ' (' + result.symbol + ')';
-        document.getElementById("total-mentions-value").innerHTML = totalMentions;
-        document.getElementById("total-awards-value").innerHTML = totalAwards;
-        document.getElementById("total-ups-value").innerHTML = totalUps;
-        document.getElementById("awards-per-mentions-value").innerHTML = awardsPerMentions.toFixed(2);
-
-        let coinNameElements = document.getElementsByClassName("coin-name-class");
-        for(let coinNameIndex = 0; coinNameIndex < coinNameElements.length; coinNameIndex++)
-            coinNameElements[coinNameIndex].innerHTML = coinName;
-        
 
         let topMentionerLastDayDocument = document.getElementById("top-mentioner-last-day");
         let topMentionerAllTimeDocument = document.getElementById("top-mentioner-all-time");
@@ -73,25 +51,6 @@ function getCoinDetails() {
         setRedditAvatar(topMentiorerGainedAwards.author_name, "top-mentioner-per-awards-avatar");
 
         
-
-        //marketCapRank = Math.ceil(coinsDataArray[0].market_cap_change_percentage_24h);
-        let coinSymbol = result.symbol;
-        
-        let commentsArray = result.topCommentsArray;
-    
-        //document.getElementById("rank-value").innerHTML = marketCapRank;
-        //document.getElementById("coin-name-rank").innerHTML = coinName;
-
-        plotLineChartMentionsMarketCapByDay(result.labels, result.mentionsData, result.marketCapData, result.awardsData, result.upsData, "mentions-per-day-chart");
-        plotLineChartMentionsVolumeByDay(result.labels, result.mentionsData, result.volume, "mentions-per-day-volume-chart");
-
-        var commentsCard = document.getElementById("mentions-comments-card");
-
-        commentsArray.forEach(comment => {
-            commentsCard.appendChild(createComment(comment, coinName, coinSymbol));
-            commentsCard.appendChild(document.createElement('hr'));
-        });
-
         var topMentionersCard = document.getElementById("top-mentioner-card");
         topMentioners.forEach(mentioner => {
             topMentionersCard.appendChild(createMentionerRow(mentioner));
@@ -111,6 +70,57 @@ function getCoinDetails() {
         topMentionersUpvoted.forEach(mentioner => {
             topMentionersUpvotedCard.appendChild(createMentionerRow(mentioner));
         });
+
+    });
+
+}
+
+function getCoinDetails() {
+    $.ajax({
+        url: "https://aldobrand.herokuapp.com/get-coin-details-data?coin="+getCoinNameFromUrl(),
+        context: document.body
+    }).done(function(result) {
+
+        const totalMentions = result.totalMentions;
+        const totalAwards = result.totalAwards;
+        const totalUps = result.totalUps;
+        const awardsPerMentions = totalAwards/totalMentions;
+
+        const coinId = result.id;
+        coinName = result.name;
+        const image = result.image;
+
+        document.getElementById("coin-logo").src = image;
+        document.getElementById("coin-name").innerHTML = titleCase(coinName);
+        document.getElementById("coin-title").innerHTML = titleCase(coinName);
+        document.getElementById("coin-symbol").innerHTML = ' (' + result.symbol + ')';
+        document.getElementById("total-mentions-value").innerHTML = totalMentions;
+        document.getElementById("total-awards-value").innerHTML = totalAwards;
+        document.getElementById("total-ups-value").innerHTML = totalUps;
+        document.getElementById("awards-per-mentions-value").innerHTML = awardsPerMentions.toFixed(2);
+
+        let coinNameElements = document.getElementsByClassName("coin-name-class");
+        for(let coinNameIndex = 0; coinNameIndex < coinNameElements.length; coinNameIndex++)
+            coinNameElements[coinNameIndex].innerHTML = coinName;
+
+        //marketCapRank = Math.ceil(coinsDataArray[0].market_cap_change_percentage_24h);
+        let coinSymbol = result.symbol;
+        
+        let commentsArray = result.topCommentsArray;
+    
+        //document.getElementById("rank-value").innerHTML = marketCapRank;
+        //document.getElementById("coin-name-rank").innerHTML = coinName;
+
+        plotLineChartMentionsMarketCapByDay(result.labels, result.mentionsData, result.marketCapData, result.awardsData, result.upsData, "mentions-per-day-chart");
+        plotLineChartMentionsVolumeByDay(result.labels, result.mentionsData, result.volume, "mentions-per-day-volume-chart");
+
+        var commentsCard = document.getElementById("mentions-comments-card");
+
+        commentsArray.forEach(comment => {
+            commentsCard.appendChild(createComment(comment, coinName, coinSymbol));
+            commentsCard.appendChild(document.createElement('hr'));
+        });
+
 
     })
 }
