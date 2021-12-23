@@ -3,11 +3,19 @@ const coinSet = new Set();
 
 
 getCoinDetails();
-getDataList();
+getDataList("");
 getPositionsChartData();
 getTopMentionersByCoin();
 
 let coinName = "";
+
+$("#search-coin-value").on("input", function (e) {
+    getDataList($("#search-coin-value").val());
+});
+
+$("#search-coin-value-mobile").on("input", function (e) {
+    getDataList($("#search-coin-value-mobile").val());
+});
 
 function getPositionsChartData() {
     $.ajax({

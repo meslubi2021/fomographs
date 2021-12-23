@@ -6,12 +6,15 @@ getOverviewData();
 getBarChartData();
 getMoontionerOverview();
 
+const userSet = new Set();
+
 $("#search-coin-value").on("input", function (e) {
   getDataList($("#search-coin-value").val());
 });
 
-
-const userSet = new Set();
+$("#search-coin-value-mobile").on("input", function (e) {
+  getDataList($("#search-coin-value-mobile").val());
+});
 
   function getBestCoinsData(){
     $.ajax({
