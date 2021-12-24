@@ -6,6 +6,8 @@ const REDDIT_USER_BASE_URL = 'https://www.reddit.com/user/';
 const COINSIGHT_COIN_DETAILS_URL = 'coin-details.html'
 const COINSIGHT_MENTIONER_DETAILS_URL = 'mentioner-details.html?user='
 
+let queryToSend = "";
+
 function getCoinNameFromUrl() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -906,53 +908,59 @@ function getTopDecreasedCoinByMention(afterMap, beforeMap) {
 }
 
 function getDataList(q) {
-  $.ajax({
-    url: "https://aldobrand.herokuapp.com/get-datalist?q="+q,
-    context: document.body
-  }).done(function(result) {
-    let datalist = document.getElementById("aviable-coin-list");
-    datalist.innerHTML = '';
 
-    result.coinsList.forEach(coin => {
-      var opt = document.createElement('option');
-      opt.value = titleCase(coin.name);
-      opt.innerHTML = coin.symbol;
-      $(opt).attr("type", "coin");
-      datalist.appendChild(opt);
-    });
-    
-    result.usersList.forEach(user => {
-      var opt = document.createElement('option');
-      opt.value = user.name;
-      opt.innerHTML = "User";
-      $(opt).attr("type", "user");
-      datalist.appendChild(opt);
-      userSet.add(user.name);
-    });
+  queryToSend = q;
 
-    coinsListArray = result.coinsList;
+  setTimeout( function () {
+    if(queryToSend == q){
+      $.ajax({
+        url: "https://aldobrand.herokuapp.com/get-datalist?q="+q,
+        context: document.body
+      }).done(function(result) {
+        let datalist = document.getElementById("aviable-coin-list");
+        datalist.innerHTML = '';
 
-    $("#search-coin-value").on("change", function (e) {
-      if(userSet.has(e.target.value))
-        location.href = "mentioner-details.html?user="+e.target.value;
-      else{
-        coinsListArray.forEach(coin => {
-          if(coin.name==e.target.value.toLowerCase())
-            location.href = "coin-details.html?coin="+coin.id;
+        result.coinsList.forEach(coin => {
+          var opt = document.createElement('option');
+          opt.value = titleCase(coin.name);
+          opt.innerHTML = coin.symbol;
+          $(opt).attr("type", "coin");
+          datalist.appendChild(opt);
         });
-      }
-    });
-    
-    $("#search-coin-value-mobile").on("change", function (e) {
-      if(userSet.has(e.target.value))
-        location.href = "mentioner-details.html?user="+e.target.value;
-      else{
-        coinsListArray.forEach(coin => {
-          if(coin.name==e.target.value.toLowerCase())
-            location.href = "coin-details.html?coin="+coin.id;
+        
+        result.usersList.forEach(user => {
+          var opt = document.createElement('option');
+          opt.value = user.name;
+          opt.innerHTML = "User";
+          $(opt).attr("type", "user");
+          datalist.appendChild(opt);
+          userSet.add(user.name);
         });
-      }
-    });
 
-  });
+        coinsListArray = result.coinsList;
+
+        $("#search-coin-value").on("change", function (e) {
+          if(userSet.has(e.target.value))
+            location.href = "mentioner-details.html?user="+e.target.value;
+          else{
+            coinsListArray.forEach(coin => {
+              if(coin.name==e.target.value.toLowerCase())
+                location.href = "coin-details.html?coin="+coin.id;
+            });
+          }
+        });
+        
+        $("#search-coin-value-mobile").on("change", function (e) {
+          if(userSet.has(e.target.value))
+            location.href = "mentioner-details.html?user="+e.target.value;
+          else{
+            coinsListArray.forEach(coin => {
+              if(coin.name==e.target.value.toLowerCase())
+                location.href = "coin-details.html?coin="+coin.id;
+            });
+          }
+        });
+      });
+    }
+  }, 500);
 }
