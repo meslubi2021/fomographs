@@ -969,9 +969,10 @@ function getDataList(q) {
 function bindOnClick(id, url) {
   $("#"+id).on("click",
   function() { 
-    window.open(
+    /*window.open(
       url,
       '_blank'
-    )
+    )*/
+    location.href = url;
   });
 }
