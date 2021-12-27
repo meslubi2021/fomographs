@@ -967,7 +967,7 @@ function getDataList(q) {
 }
 
 function bindOnClick(id, url) {
-  $("."+id).onclick =
+  $("#"+id).onclick =
   function() { 
     window.open(
       url,
