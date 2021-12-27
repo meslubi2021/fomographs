@@ -45,6 +45,15 @@
     width: 30%;
 }
 
+.three-rows-comment {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+ }
+
 @media only screen and (orientation: portrait) {
     .fix-mobile-blink {
         width: 0!important;

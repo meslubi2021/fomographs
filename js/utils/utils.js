@@ -311,6 +311,7 @@ function createComment(comment, coinName, coinSymbol) {
   spanUps.innerHTML = 'Upvotes: '+comment.ups;
   h4.appendChild(spanUps);
   spanComment.classList.add("comment-body");
+  spanComment.classList.add("three-rows-comment");
   spanComment.innerHTML = comment.body ? boldCoinNameAndSymbol(comment.body, coinName, coinSymbol) : "Comment not available";
   spanComment.onclick = function() { 
     window.open(
