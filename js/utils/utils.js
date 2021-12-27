@@ -967,11 +967,11 @@ function getDataList(q) {
 }
 
 function bindOnClick(id, url) {
-  $("#"+id).onclick =
+  $("#"+id).on("click",
   function() { 
     window.open(
       url,
       '_blank'
     )
-  };
+  });
 }
