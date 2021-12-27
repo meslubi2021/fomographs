@@ -965,3 +965,13 @@ function getDataList(q) {
     }
   }, 500);
 }
+
+function bindOnClick(id, url) {
+  $("."+id).onclick =
+  function() { 
+    window.open(
+      url,
+      '_blank'
+    )
+  };
+}

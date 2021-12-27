@@ -16,19 +16,6 @@ $("#search-coin-value-mobile").on("input", function (e) {
   getDataList($("#search-coin-value-mobile").val());
 });
 
-  function getBestCoinsData(){
-    $.ajax({
-      url: "https://aldobrand.herokuapp.com/get-best-coins-data/",
-      context: document.body
-    }).done(function(result) {
-      const mostAwarded = result.mostAwardedCoin;
-      const mostAwardedValue = document.getElementById("most-awarded-value");
-      $("#most-awarded-image").attr("src", mostAwarded._id.image)
-      mostAwardedValue.innerHTML = mostAwarded._id.name + " ("+ mostAwarded.awards + ")";
-      mostAwardedValue.onclick = goToCoinPageFunction(mostAwarded._id.id);
-    });
-  }
-
   function getMoontionerOverview(){
     $.ajax({
       url: "https://aldobrand.herokuapp.com/get-top-mentioners-by-coin?coin=moon",
@@ -72,6 +59,7 @@ $("#search-coin-value-mobile").on("input", function (e) {
       mostMentionedValue.innerHTML = mostMentioned.name + " ("+ mostMentioned.lastDayMentions + ")";
       mostMentionedValue.onclick = goToCoinPageFunction(mostMentioned.id);
       document.getElementById("last-update").innerHTML = mostMentioned.lastUpdate.substr(6,2) + '/' + mostMentioned.lastUpdate.substr(4,2) + '/' + mostMentioned.lastUpdate.substr(0,4);
+      bindOnClick("card-coin-of-the-day", "coin-details.html?coin="+mostMentioned.id);
     });
 
     $.ajax({
@@ -84,6 +72,7 @@ $("#search-coin-value-mobile").on("input", function (e) {
       $("#most-awarded-image").attr("src", mostAwarded.image)
       mostAwardedValue.innerHTML = mostAwarded.name + " ("+ mostAwarded.lastDayAwards + ")";
       mostAwardedValue.onclick = goToCoinPageFunction(mostAwarded.id);
+      bindOnClick("card-most-awarded-coin", "coin-details.html?coin="+mostAwarded.id);
     });
 
     $.ajax({
@@ -115,7 +104,7 @@ $("#search-coin-value-mobile").on("input", function (e) {
       $("#coin-of-the-day-image").attr("src", coinOfTheDay.image)
       mostAwardedValue.innerHTML = coinOfTheDay.name + " (Score: " +  result.trendingCoins[0].score.toFixed(2) + ")";
       mostAwardedValue.onclick = goToCoinPageFunction(coinOfTheDay.id);
-
+      bindOnClick("card-trending-coin", "coin-details.html?coin="+coinOfTheDay.id);
     });
 
     $.ajax({
@@ -128,7 +117,7 @@ $("#search-coin-value-mobile").on("input", function (e) {
       $("#coin-of-the-week-image").attr("src", coinOfTheDay.image)
       mostAwardedValue.innerHTML = coinOfTheDay.name + " (Score: " +  result.trendingCoins[0].score.toFixed(2) + ")";
       mostAwardedValue.onclick = goToCoinPageFunction(coinOfTheDay.id);
-
+      bindOnClick("flavour-of-the-week", "coin-details.html?coin="+coinOfTheDay.id);
     });
 
     
