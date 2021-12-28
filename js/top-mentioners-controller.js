@@ -17,10 +17,10 @@ $("#search-coin-value-mobile").on("input", function (e) {
 
 function getGlobalPositions() {
     $.ajax({
-        url: "https://aldobrand.herokuapp.com/get-global-positions?user=" + getUsernameFromUrl(),
+        url: "https://aldobrand.herokuapp.com/get-top-users?stats=mentions",
         context: document.body
     }).done(function (result) {
-        let datatableBody = $("#datatable-body");
+        let datatableBody = document.getElementById("datatable-body");
         let users = [
             {username: "_pistone", mentions: 100, ups: 200, awards: 1},
             {username: "furbone", mentions: 200, ups: 300, awards: 1},
