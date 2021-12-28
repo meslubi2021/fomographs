@@ -27,7 +27,7 @@ function getStats() {
         });
 
         $('#dataTable').DataTable({
-            "order": [[ 4, "desc" ]]
+            "order": [[ 3, "desc" ]]
         });
     });
 }
