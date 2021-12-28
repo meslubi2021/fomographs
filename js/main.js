@@ -56,6 +56,7 @@ $("#search-coin-value-mobile").on("input", function (e) {
       const mostMentioned = result[0].coin;
       const mostMentionedValue = document.getElementById("most-mentioned-value");
       $("#most-mentioned-image").attr("src", mostMentioned.image);
+      $("#most-mentioned-image").attr("alt", mostMentioned.name + " logo");
       mostMentionedValue.innerHTML = mostMentioned.name + " ("+ mostMentioned.lastDayMentions + ")";
       mostMentionedValue.onclick = goToCoinPageFunction(mostMentioned.id);
       document.getElementById("last-update").innerHTML = mostMentioned.lastUpdate.substr(6,2) + '/' + mostMentioned.lastUpdate.substr(4,2) + '/' + mostMentioned.lastUpdate.substr(0,4);
@@ -70,6 +71,7 @@ $("#search-coin-value-mobile").on("input", function (e) {
       const mostAwarded = result[0].coin;
       const mostAwardedValue = document.getElementById("most-awarded-value");
       $("#most-awarded-image").attr("src", mostAwarded.image)
+      $("#most-awarded-image").attr("alt", mostAwarded.name + " logo");
       mostAwardedValue.innerHTML = mostAwarded.name + " ("+ mostAwarded.lastDayAwards + ")";
       mostAwardedValue.onclick = goToCoinPageFunction(mostAwarded.id);
       bindOnClick("card-most-awarded-coin", "coin-details.html?coin="+mostAwarded.id);
@@ -101,7 +103,8 @@ $("#search-coin-value-mobile").on("input", function (e) {
 
       const coinOfTheDay = result.trendingCoins[0];
       const mostAwardedValue = document.getElementById("coin-of-the-day-value");
-      $("#coin-of-the-day-image").attr("src", coinOfTheDay.image)
+      $("#coin-of-the-day-image").attr("src", coinOfTheDay.image);
+      $("#coin-of-the-day-image").attr("alt", coinOfTheDay.name + " logo");
       mostAwardedValue.innerHTML = coinOfTheDay.name + " (Score: " +  result.trendingCoins[0].score.toFixed(2) + ")";
       mostAwardedValue.onclick = goToCoinPageFunction(coinOfTheDay.id);
       bindOnClick("card-trending-coin", "coin-details.html?coin="+coinOfTheDay.id);
@@ -114,7 +117,8 @@ $("#search-coin-value-mobile").on("input", function (e) {
 
       const coinOfTheDay = result.trendingCoins[0];
       const mostAwardedValue = document.getElementById("coin-of-the-week-value");
-      $("#coin-of-the-week-image").attr("src", coinOfTheDay.image)
+      $("#coin-of-the-week-image").attr("src", coinOfTheDay.image);
+      $("#coin-of-the-week-image").attr("alt", coinOfTheDay.name + " logo");
       mostAwardedValue.innerHTML = coinOfTheDay.name + " (Score: " +  result.trendingCoins[0].score.toFixed(2) + ")";
       mostAwardedValue.onclick = goToCoinPageFunction(coinOfTheDay.id);
       bindOnClick("flavour-of-the-week", "coin-details.html?coin="+coinOfTheDay.id);

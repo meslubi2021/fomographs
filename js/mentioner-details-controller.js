@@ -55,14 +55,17 @@ function getMentionerDetailsData() {
 
         $("#top-mentioned-coin").html(topMentionedCoin.name + " (" + topMentionedCoin.totalComments + ")  <i class='global-position'>" + /*coinGlobalPositions.mentionsPosition +*/"°</i>");
         $("#top-mentioned-coin-image").attr("src", topMentionedCoin.image);
+        $("#top-mentioned-coin-image").attr("alt", topMentionedCoin.name + " logo");
         bindOnClick("card-top-mentioned-coin", "coin-details.html?coin="+topMentionedCoin.id);
 
         $("#top-awarding-coin").html(topAwardingCoin.name + " (" + topAwardingCoin.totalAwards + ")  <i class='global-position'>" + /*coinGlobalPositions.awardsPosition +*/"°</i>");
         $("#top-awarding-coin-image").attr("src", topAwardingCoin.image);
+        $("#top-awarding-coin-image").attr("alt", topAwardingCoin.name + " logo");
         bindOnClick("card-top-awarding-coin", "coin-details.html?coin="+topAwardingCoin.id);
 
         $("#top-upvoting-coin").html(topUpvotingCoin.name + " (" + topUpvotingCoin.totalUps + ")  <i class='global-position'>" + /*coinGlobalPositions.upsPosition +*/"°</i>");
         $("#top-upvoting-coin-image").attr("src", topUpvotingCoin.image);
+        $("#top-upvoting-coin-image").attr("alt", topUpvotingCoin.name + " logo");
         bindOnClick("card-top-upvoting-coin", "coin-details.html?coin="+topUpvotingCoin.id);
 
         let userRadarData = [userMentionsStats.totalComments, userMentionsStats.totalAwards, userMentionsStats.totalUps, userMentionsStats.uniqueCoinMentioned];
