@@ -69,16 +69,26 @@
                     <span>Dashboard</span></a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-coins"></i>
-                    <span>Coin Details</span></a>
-            </li>
-
             <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-reddit"></i>
-                    <span>Mentioners Details</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-coins"></i>
+                    <span>Top Coins</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Top mentioned coins:</h6>
+                        <a class="collapse-item" href="coin-details.html?coin=bitcoin">BTC</a>
+                        <a class="collapse-item" href="coin-details.html?coin=ethereum">ETH</a>
+                        <a class="collapse-item" href="coin-details.html?coin=moon">MOON</a>
+                        <a class="collapse-item" href="coin-details.html?coin=matic-network">MATIC</a>
+                        <a class="collapse-item" href="coin-details.html?coin=crypto-com-chain">CRO</a>
+                        <a class="collapse-item" href="coin-details.html?coin=cardano">ADA</a>
+                        <a class="collapse-item" href="coin-details.html?coin=algorand">ALGO</a>
+                        <a class="collapse-item" href="coin-details.html?coin=loopring">LRC</a>
+                        <a class="collapse-item" href="coin-details.html?coin=cosmos">ATOM</a>
+                        <a class="collapse-item" href="coin-details.html?coin=polkadot">DOT</a>
+                    </div>
+                </div>
             </li>
 
         </ul>
