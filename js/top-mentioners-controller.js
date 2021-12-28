@@ -21,7 +21,7 @@ function getGlobalPositions() {
         context: document.body
     }).done(function (result) {
         let datatableBody = document.getElementById("datatable-body");
-        let users = [
+        /*let users = [
             {username: "_pistone", mentions: 100, ups: 200, awards: 1},
             {username: "furbone", mentions: 200, ups: 300, awards: 1},
             {username: "maltone", mentions: 1030, ups: 2200, awards: 1},
@@ -37,9 +37,9 @@ function getGlobalPositions() {
             {username: "visualstudione", mentions: 1001, ups: 646, awards: 1},
             {username: "bottone", mentions: 3100, ups: 24, awards: 1},
             {username: "frattone", mentions: 1200, ups: 734, awards: 1}
-        ];
+        ];*/
 
-        users.forEach(user => {
+        result.forEach(user => {
             createNewUserDataTableRow(user, datatableBody)
         });
 
@@ -51,11 +51,11 @@ function createNewUserDataTableRow(user, datatableBody){
 
     var tr = document.createElement('tr');
     createTdAndAppendToTr(user.username, tr);
-    createTdAndAppendToTr(user.mentions, tr);
-    createTdAndAppendToTr(user.ups, tr);
-    createTdAndAppendToTr(user.awards, tr);
-    createTdAndAppendToTr((user.mentions/user.ups).toFixed(2), tr);    
-    createTdAndAppendToTr((user.mentions/user.awards).toFixed(2), tr);
+    createTdAndAppendToTr(user.totalMentions, tr);
+    createTdAndAppendToTr(user.totalUps, tr);
+    createTdAndAppendToTr(user.totalAwards, tr);
+    createTdAndAppendToTr((user.totalMentions/user.totalUps).toFixed(2), tr);    
+    createTdAndAppendToTr((user.totalMentions/user.totalAwards).toFixed(2), tr);
 
     datatableBody.appendChild(tr);
 
