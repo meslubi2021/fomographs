@@ -26,7 +26,9 @@ function getStats() {
             createNewUserDataTableRow(user, datatableBody)
         });
 
-        $('#dataTable').DataTable();
+        $('#dataTable').DataTable({
+            "order": [[ 3, "desc" ]]
+        });
     });
 }
 
