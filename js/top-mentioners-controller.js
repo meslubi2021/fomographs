@@ -27,7 +27,7 @@ function getStats() {
         });
 
         $('#dataTable').DataTable({
-            "order": [[ 2, "desc" ]]
+            "order": [[ 1, "desc" ]]
         });
     });
 }
@@ -39,8 +39,8 @@ function createNewUserDataTableRow(user, datatableBody){
     createTdAndAppendToTr(user.totalMentions, tr);
     createTdAndAppendToTr(user.totalUps, tr);
     createTdAndAppendToTr(user.totalAwards, tr);
-    createTdAndAppendToTr((user.totalMentions/user.totalUps).toFixed(2), tr);    
-    createTdAndAppendToTr((user.totalMentions/user.totalAwards).toFixed(2), tr);
+    createTdAndAppendToTr((user.totalUps/user.totalMentions).toFixed(2), tr);    
+    createTdAndAppendToTr((user.totalAwards/user.totalMentions).toFixed(2), tr);
 
     datatableBody.appendChild(tr);
 
