@@ -2,9 +2,9 @@
 const userSet = new Set();
 const coinSet = new Set();
 
-//getDataList("");
+getDataList("");
 
-getGlobalPositions();
+getStats();
 
 $("#search-coin-value").on("input", function (e) {
     getDataList($("#search-coin-value").val());
@@ -15,9 +15,9 @@ $("#search-coin-value-mobile").on("input", function (e) {
 });
 
 
-function getGlobalPositions() {
+function getStats() {
     $.ajax({
-        url: "https://aldobrand.herokuapp.com/get-top-users?stats=mentions",
+        url: "https://aldobrand.herokuapp.com/get-top-users?stat=mentions&limit=100",
         context: document.body
     }).done(function (result) {
         let datatableBody = document.getElementById("datatable-body");
