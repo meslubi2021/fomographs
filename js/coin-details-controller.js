@@ -97,7 +97,7 @@ function getCoinDetails() {
         const coinId = result.id;
         coinName = result.name;
         const image = result.image;
-
+        
         document.getElementById("coin-logo").src = image;
         document.getElementById("coin-logo").alt = coinName + " logo";
         document.getElementById("coin-name").innerHTML = titleCase(coinName);
