@@ -51,9 +51,9 @@ function createNewUserDataTableRow(user, datatableBody){
 
     var tr = document.createElement('tr');
     var tdUser = createTdAndAppendToTr(user.username);
-    tdUser.onclick(function () {
+    tdUser.onclick = function () {
         location.href = COINSIGHT_MENTIONER_DETAILS_URL + user.username;
-    });
+    };
     tr.appendChild(tdUser);
     tr.appendChild(createTdAndAppendToTr(user.totalMentions));
     tr.appendChild(createTdAndAppendToTr(user.totalUps));
