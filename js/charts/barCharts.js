@@ -218,7 +218,7 @@ function plotCharts(coinsDataArray, sortMethod, id, dataToPlot) {
             var info =  chart.datasets[tooltipItem.datasetIndex].info || '';
             var details;
             if (coinData) {
-              details = [ "Day: " + timestamp_format_2(coinData.lastUpdate[tooltipItem.index]),
+              details = [ "Day: " + timestamp_format_2(coinData.lastUpdate),
                           "Mentions: " + coinData.mentions[tooltipItem.index] ,
                           //"Total ups: " + coinData.ups[tooltipItem.index],
                           /*"Total downs: " + coinData.downs[tooltipItem.index],*/
