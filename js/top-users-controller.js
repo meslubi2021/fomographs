@@ -1,7 +1,10 @@
 
 const userSet = new Set();
 const coinSet = new Set();
-const USER_STAT_TYPES = ["mentions", "ups", "awards"];
+const MENTIONS_STAT_TYPE = "mentions";
+const UPS_STAT_TYPE = "ups";
+const AWARDS_STAT_TYPE = "awards";
+const USER_STAT_TYPES = [MENTIONS_STAT_TYPE, UPS_STAT_TYPE, AWARDS_STAT_TYPE];
 
 getDataList("");
 
@@ -24,6 +27,21 @@ function getStats() {
 
     if(!USER_STAT_TYPES.includes(type))
         location.href = "404.html";
+
+    switch(type){
+        case MENTIONS_STAT_TYPE:
+            $("#page-title").html("Best Users rankings by mentions");
+            $("#table-title").html("Top mentions users");
+            break;
+        case UPS_STAT_TYPE:
+            $("#page-title").html("Best Users rankings by upvotes");
+            $("#table-title").html("Top upvoted users");
+            break;
+        case AWARDS_STAT_TYPE:
+            $("#page-title").html("Best Users rankings by awards");
+            $("#table-title").html("Top awarded users");
+            break;
+    }
 
     $.ajax({
         url: "https://aldobrand.herokuapp.com/get-top-users?stat="+type+"&limit=100",
