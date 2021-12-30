@@ -54,6 +54,14 @@
     -webkit-box-orient: vertical;
  }
 
+.commenter:hover{
+    text-decoration: underline;
+}
+
+#most-mentioned-value, #most-awarded-value, #coin-of-the-day-value, #coin-of-the-week-value:hover{
+    text-decoration: underline;
+}
+
 @media only screen and (orientation: portrait) {
     .fix-mobile-blink {
         width: 0!important;
