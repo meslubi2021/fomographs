@@ -58,7 +58,7 @@
     text-decoration: underline;
 }
 
-#most-mentioned-value, #most-awarded-value, #coin-of-the-day-value, #coin-of-the-week-value:hover{
+#most-mentioned-value:hover, #most-awarded-value:hover, #coin-of-the-day-value:hover, #coin-of-the-week-value:hover{
     text-decoration: underline;
 }
 
