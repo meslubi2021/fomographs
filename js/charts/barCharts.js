@@ -47,7 +47,7 @@ function plotBarChart(coinData, id, color) {
   let titles = [];
   let options = getOptionsBar(labels, titles);
 
-  options.scales.xAxes[0].ticks["beginAtZero"] = true;
+  options.scales.yAxes[0].ticks["beginAtZero"] = true;
 
   coinData.forEach(coinPosition => {
     data.push(coinPosition.differencePosition);
